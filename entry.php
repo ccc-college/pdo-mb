@@ -58,7 +58,7 @@ if (!empty($_POST)) {
 	}
 }
 // 書き直し
-if ($_REQUEST['action'] == 'rewrite') {
+if ($_GET['action'] == 'rewrite') {
 $_POST = $_SESSION['join'];
 $error['rewrite'] = true;
 }
