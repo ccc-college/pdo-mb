@@ -74,7 +74,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 			<img src="./member_picture/<?php echo $picture; ?>" width="100" height="100" alt="" />
 		</dd>
 		</dl>
-		<div><a href="input.php?action=rewrite">&laquo;&nbsp;修正</a> | <input
+		<div><a href="input.php?action=rewrite">&laquo;&nbsp;修正する</a>　|　<input
 		type="submit" value="登録する" /></div>
 		</form>
   </div>
