@@ -5,7 +5,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
    if(!empty($_POST)){
         $email = htmlspecialchars($_SESSION['join']['email'], ENT_QUOTES, 'UTF-8');
         $user = htmlspecialchars($_SESSION['join']['name'], ENT_QUOTES, 'UTF-8');
-        $password = sha1($_SESSION['join']['password']);
+        $password = password_hash($_SESSION['join']['password'],PASSWORD_DEFAULT);
         $picture = htmlspecialchars($_SESSION['join']['image'], ENT_QUOTES, 'UTF-8');
 
         $dbh = db_conn();
@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     } else {
         $email = htmlspecialchars($_SESSION['join']['email'], ENT_QUOTES, 'UTF-8');
         $user = htmlspecialchars($_SESSION['join']['name'], ENT_QUOTES, 'UTF-8');
-        $password = sha1($_SESSION['join']['password']);
+        $password = password_hash($_SESSION['join']['password'],PASSWORD_DEFAULT);
         $picture = htmlspecialchars($_SESSION['join']['image'], ENT_QUOTES, 'UTF-8');
     }
 }
